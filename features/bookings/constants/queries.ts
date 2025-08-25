@@ -1,0 +1,40 @@
+
+export const BOOKINGS_SELECT = `
+  id,
+  booking_code,
+  league,
+  home_team,
+  home_team_logo,
+  away_team,
+  away_team_logo,
+  event_date,
+  event_time,
+  status,
+  amount,
+  party_size,
+  special_requests,
+  payment_status,
+  venues:venue_id(
+    id,
+    name,
+    address,
+    amenities,
+    longitude,
+    latitude,
+    contact_phone,
+    contact_email,
+    manager:manager_id(
+        id,
+        first_name,
+        last_name,
+        phone_number
+      )
+  ),
+  user:user_id(
+    id,
+    username,
+    phone_number,
+    first_name,
+    last_name
+  )
+`;
